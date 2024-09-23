@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unplug Cat Cafe</title>
+    <link rel="icon" type="image/x-icon" href="images/logo_favicon.ico">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #6b4f4f;
+
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #1a120f;
+            display: flex;
+            align-items: center; /* make it horizontal */
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            padding-top: 12px;
+            height: 70px;
+        }
+        .logo-text {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 28px;
+
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 25px;
+        }
+        nav ul li a {
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            background-color: red;
+        }
+
+        
+        .contacts {
+            flex-grow: 1;
+            text-align: center;
+            
+        }
+        .contacts h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .contacts figure {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            color: white;
+            font-size: 14px;
+        }
+        .contacts figure img {
+            width: 30vw;
+        }
+        .contacts p {
+            color: white;
+            font-size: 20px;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: red;
+            font-size: 16px;
+            font-weight: bold;
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 6px 16px;
+            line-height: 20px;
+            border-radius:30px;
+            border:none;
+            letter-spacing:-1px;
+            margin-bottom: 40px;
+            text-decoration: none;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+        .contact-btn:hover {
+            background-color: green;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+
+        
+
+        footer {
+            background-color: #1a120f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="images\logo_big.png" alt="Logo image"></a>
+            <a href="index.html" class="logo-text">Unplug Cat Cafe</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="contacts">
+        <h1>Contact Us!</h1>
+        <figure>
+            <img src="images\others\First Cafe.jpg" alt="Cafe">
+            <figcaption>Our first Store since 2025: Fake address here.</figcaption>
+        </figure>
+        <p>Email: ho5772@truman.edu</p>
+        <p>Phone: it's fake number for assignment.</p>
+
+        <a href="mailto:devhawon@gmail.com" class="contact-btn">Email</a>
+        <a href="tel:+1234567890" class="contact-btn">Phone Call</a>
+    </div>
+
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Unplug Cat Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
