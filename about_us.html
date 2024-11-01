@@ -6,138 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unplug Cat Cafe</title>
     <link rel="icon" type="image/x-icon" href="images/logo_favicon.ico">
-    
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        header {
-            background-color: #1a120f;
-            display: flex;
-            align-items: center; /* make it horizontal */
-            justify-content: space-between;
-            height: 80px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo-img {
-            padding-top: 12px;
-            height: 70px;
-        }
-        .logo-text {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding-left: 15px;
-            font-size: 28px;
-
-        }
-        nav ul {
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 25px;
-        }
-        nav ul li a {
-            color: white;
-            text-align: center;
-            padding: 5px 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-            background-color: red;
-        }
-
-        .backgrounds {
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            position:relative;
-            overflow:hidden;
-        }
-        .background1 {
-            width: 100vw;
-            height: 80vh;
-            z-index : -1;
-            position: absolute;
-            background-image: url('images/background/barista.jpg');
-            background-size: cover;
-
-            -webkit-filter: blur(7px);
-            -moz-filter: blur(7px);
-            -o-filter: blur(7px);
-            -ms-filter: blur(7px);
-            filter: blur(7x);
-            transform: scale(1.1); /* scale 1.1 to remove white border after blur filter */
-        }
-        .background2 {
-            width: 100vw;
-            height: 60vh;
-            z-index : -1;
-            position: absolute;
-            background-image: url('images/background/boardgame.png');
-            background-size: cover;
-
-            -webkit-filter: blur(7px);
-            -moz-filter: blur(7px);
-            -o-filter: blur(7px);
-            -ms-filter: blur(7px);
-            filter: blur(7x);
-            transform: scale(1.1); /* scale 1.1 to remove white border after blur filter */
-        }
-        
-        .background3 {
-            width: 100vw;
-            height: 60vh;
-            z-index : -1;
-            position: absolute;
-            background-image: url(images/background/coffee_beans.jpg);
-            background-size: cover;
-
-            -webkit-filter: blur(7px);
-            -moz-filter: blur(7px);
-            -o-filter: blur(7px);
-            -ms-filter: blur(7px);
-            filter: blur(7x);
-            transform: scale(1.1); /* scale 1.1 to remove white border after blur filter */
-        }
-        .leftBox {
-            font-size: large;
-            font-weight: bold;
-            color: white;
-            padding-left: 50px;
-            padding-right: 55vw;
-        }
-        .rightBox {
-            font-size: large;
-            color: white;
-            font-weight: bold;
-            padding-right: 50px;
-            padding-left: 55vw;
-        }
-
-        footer {
-            background-color: #1a120f;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 
 
@@ -151,20 +21,25 @@
             <a href="index.html" class="logo-text">Unplug Cat Cafe</a>
         </div>
         <nav>
-            <ul>
+            <div class="burger-button" id="burger-button">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <script src="script.js"></script>
     </header>
 
 
 
-    <div class="backgrounds">
-        <div class="background1"></div>
-        <div class="rightBox">
+    <div class="about-us-hero">
+        <div class="background-img1"></div>
+        <div class="rightBoxInHero">
             <h1>Coffee & Talk</h1>
             <p>Welcome to Unplug Cat Cafe, where coffee meets community. 
                 Founded with a passion for crafting exceptional brews, 
@@ -174,9 +49,9 @@
     </div>
 
 
-    <div class="backgrounds">
-        <div class="background2"></div>
-        <div class="leftBox">
+    <div class="about-us-hero">
+        <div class="background-img2"></div>
+        <div class="leftBoxInHero">
             <h1>Boardgames</h1>
             <p>Welcome to Unplug Cat Cafe, your go-to spot for great coffee and endless fun! 
                 We’re not just a cafe—we’re a board game paradise where friends and families 
@@ -185,9 +60,9 @@
     </div>
 
     
-    <div class="backgrounds">
-        <div class="background3"></div>
-        <div class="rightBox">
+    <div class="about-us-hero">
+        <div class="background-img3"></div>
+        <div class="rightBoxInHero">
             <h1 id="limited-menu">Fri-Saturday Only Menu</h1>
             <p>And that's not all! every Friday and Saturday, 
                 we introduce an exciting new limited-edition menu item! 
@@ -196,7 +71,29 @@
         </div>
     </div>
 
+    <div class="member-list">
+        <div class="member">
+            <img class="member-face" src="images\member-faces\Meowis XIV.webp" alt="14">
+            <h3>Meowis XIV</h3>
+            <p>I love french vanilla pudding.</p>
+        </div>
 
+        <div class="member">
+            <img class="member-face" src="images\member-faces\HawonO.jpg" alt="Me">
+            <h3>Hawon</h3>
+            <p>Hello World! I won three barista world championships.</p>
+        </div>
+
+        <div class="member">
+            <img class="member-face" src="images\member-faces\Isaac Meowton.jpg" alt="Apple fan">
+            <h3>Isaac Meowton</h3>
+            <p>I have iPhone, iMac, Macbook, iPods.</p>
+        </div>
+        <div class="member">
+            <h3>If you come,</h3>
+            <p>Your face will be here.</p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Unplug Cat Cafe. All rights reserved.</p>

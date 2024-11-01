@@ -6,193 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unplug Cat Cafe</title>
     <link rel="icon" type="image/x-icon" href="images/logo_favicon.ico">
-    
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-        }
-
-        header {
-            background-color: #1a120f;
-            display: flex;
-            align-items: center; /* make it horizontal */
-            justify-content: space-between;
-            height: 80px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        /* also can do it with class */
-        .logo-img {
-            padding-top: 12px;
-            height: 70px;
-        }
-        .logo-text {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding-left: 15px;
-            font-size: 28px;
-
-        }
-        nav ul {
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 25px;
-        }
-        nav ul li a {
-            color: white;
-            text-align: center;
-            padding: 5px 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-            background-color: red;
-        }
-
-        .download-menu-btn {
-            background: red;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            cursor: pointer;
-            padding: 6px 16px;
-            line-height: 20px;
-            border-radius:30px;
-            border:none;
-            letter-spacing:-1px;
-            margin-bottom: 40px;
-            
-        }
-        .download-menu-btn:hover {
-            box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-            background-color: green;
-        }
-
-        .menu {
-            padding: 10px;
-            background-color: #6b4f4f;
-            padding-bottom: 80px;
-            text-align: center;
-        }
-
-        .menu-title {
-            font-size: 40px;
-            margin-bottom: 30px;
-            margin-top: 60px;
-            color: white;
-        }
-
-        .menu-items {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 10px;
-        }
-
-        .menu-item {
-            background-color: white;
-            width: 22%;
-            
-            box-shadow: 3px 5px 8px black;
-            text-align: center;
-            border-radius: 25px 25px 20px 20px;
-            margin-bottom: 25px;
-            margin-left: 15px;
-            margin-right: 15px;
-            
-        }
-
-        .menu-img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px 20px 0px 0px;
-        }
-
-        .menu-item h3 {
-            font-size: 24px;
-            
-        }
-
-        .menu-item p {
-            color: #6b4f4f;
-            font-size: 16px;
-        }
-
-        footer {
-            background-color: #1a120f;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 
 
-
 <body>
-
-
-
     <header>
         <div class="logo">
             <a href="index.html"><img class="logo-img" src="images\logo_big.png" alt="Logo image"></a>
             <a href="index.html" class="logo-text">Unplug Cat Cafe</a>
         </div>
         <nav>
-            <ul>
+            <div class="burger-button" id="burger-button">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <script src="script.js"></script>
     </header>
-
-
-
-
 
 
 
     <div class="menu">
         <h2 class="menu-title">- Menu for You -</h2>
-        <a href="images/menu/menu.png" download><button class="download-menu-btn">Download Menu</button></a>
+        <a href="images/menu/menu.png" download><button class="button">Download Menu</button></a>
 
-        <div class="menu-items">
+        <div class="menu-list">
 
             <!-- tea -->
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Americano.jpg" alt="Americano image">
                 <h3>Americano</h3>
                 <p>$4<br><br>Americano, so good.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Espresso.jpg" alt="Espresso image">
                 <h3>Espresso</h3>
                 <p>$3<br><br>Hot as love, bitter as break up.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Cappuccino.jpg" alt="Cappuccino image">
                 <h3>Cappuccino</h3>
                 <p>$5<br><br>A rich and creamy coffee topped with frothy milk foam.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Latte.jpg" alt="Latte image">
                 <h3>Latte</h3>
                 <p>$5<br><br>Smooth espresso mixed with steamed milk and a touch of sweetness.</p>
@@ -200,25 +67,25 @@
 
 
             <!-- dessert -->
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Cheesecake.jpg" alt="Cheesecake image">
                 <h3>Signature Cheesecake</h3>
                 <p>$4<br><br>Classic creamy cheesecake with a buttery graham cracker crust.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Signature Peanut Cake.jpg" alt="Signature Peanut Cake image">
                 <h3>Signature Acorn Cake</h3>
                 <p>$4<br><br>Acorn harvested by squirrel in Truman.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Chocolate Cake.jpg" alt="Chocolate Cake image">
                 <h3>Chocolate Cake</h3>
                 <p>$5<br><br>100% Belgium chocolate cake with marshmallow filling.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Raspberry Cake.jpg" alt="Raspberry Cake image">
                 <h3>Donation Raspberry Cake</h3>
                 <p>$100,000<br><br>We need money! Classic gourmet raspberry cake.</p>
@@ -226,13 +93,13 @@
 
 
             <!-- tea -->
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Mango Green Tea.jpg" alt="Mango Green Tea image">
                 <h3>Mango Green Tea</h3>
                 <p>$3<br><br>Water used to wash mango.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Earl Grey Tea.jpg" alt="Earl Grey Tea.image">
                 <h3>Earl Grey Tea</h3>
                 <p>$2<br><br>It's so as early as farmed 1 hour ago.</p>

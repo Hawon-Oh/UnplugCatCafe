@@ -7,200 +7,9 @@
     <title>Unplug Cat Cafe</title>
     <link rel="icon" type="image/x-icon" href="images/logo_favicon.ico">
     
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        header {
-            background-color: #1a120f;
-            display: flex;
-            align-items: center; /* make it horizontal */
-            justify-content: space-between;
-            height: 80px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo-img {
-            padding-top: 12px;
-            height: 70px;
-        }
-        .logo-text {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding-left: 15px;
-            font-size: 28px;
-
-        }
-        nav ul {
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 25px;
-        }
-        nav ul li a {
-            color: white;
-            text-align: center;
-            padding: 5px 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-            background-color: red;
-        }
-
-        
-        .hero {
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            position:relative;
-            overflow:hidden;
-        }
-        .hero-background {
-            width: 100vw;
-            height: 50vh;
-            z-index : -1;
-            position: absolute;
-            background-image: url('images/background/coffee_beans.jpg');
-            background-size: cover;
-
-            -webkit-filter: blur(7px);
-            -moz-filter: blur(7px);
-            -o-filter: blur(7px);
-            -ms-filter: blur(7px);
-            filter: blur(7x);
-            transform: scale(1.1); /* scale 1.1 to remove white border after blur filter */
-        }
-        .hero-title {
-            position: relative;
-            color: white;
-            font-size: 36px;
-        }
-        .hero-info {
-            
-            position: relative;
-            color: white;
-            font-size: 18px;
-            padding-bottom: 10px;
-        }
-        .button {
-            position: relative;
-            background: red;
-            font-size: 16px;
-            font-weight: bold;
-            color: whitesmoke;
-            cursor: pointer;
-            padding: 6px 16px;
-            line-height: 20px;
-            border-radius:30px;
-            border:none;
-            letter-spacing:-1px;
-            margin-bottom: 40px;
-        }
-        .button:hover {
-            box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-            background-color: green;
-        }
-
-        .menu {
-            padding: 30px;
-            background-color: #6b4f4f;
-            padding-bottom: 100px;
-            text-align: center;
-        }
-        .menu-title {
-            
-            font-size: 40px;
-            margin-bottom: 10px;
-            margin-top: 60px;
-            color: white;
-        }
-        .menu h3 {
-            color: white;
-        }
-        .limited-menu-btn {
-            background: red;
-            font-size: 16px;
-            font-weight: bold;
-            color: whitesmoke;
-            cursor: pointer;
-            padding: 6px 16px;
-            line-height: 20px;
-            border-radius:30px;
-            border:none;
-            letter-spacing:-1px;
-            margin-bottom: 40px; 
-        }
-        .limited-menu-btn:hover {
-            box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-            background-color: green;
-        }
-
-
-        .menu-items {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            
-        }
-
-        .menu-item {
-            background-color: white;
-            color: black;
-            width: 30%;
-            padding: 15px;
-            margin: 5px;
-            box-shadow: 0 2px 10px black;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 50px;
-        }
-        .menu-name {
-            color: black;
-        }
-        .menu-img {
-            width: 100%;
-            height: auto;
-        }
-
-        .menu-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-
-        .menu-item p {
-            color: #6b4f4f;
-            font-size: 18px;
-        }
-
-        footer {
-            background-color: #1a120f;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
-
-
-
-
 <body>
 
 
@@ -211,13 +20,18 @@
             <a href="index.html" class="logo-text">Unplug Cat Cafe</a>
         </div>
         <nav>
-            <ul>
+            <div class="burger-button" id="burger-button">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <script src="script.js"></script>
     </header>
 
 
@@ -235,39 +49,56 @@
     </section>
 
 
+    <a href="contact.html">
+        <section class="news">
+            <h2>News</h2>
+            <h3>- We are hiring now. Contact us! -</h3>
+        </section>
+    </a>
+
+
 
     <section class="menu">
-        <h2 class="menu-title">- Best Menu -</h2>
+        <h2>- Best Menu -</h2>
         <h3>We also have limited menu every Fri-Sat.</h3>
-        <a href="about_us.html#limited-menu"><button class="limited-menu-btn">Learn Limited Menu</button></a>
+        <a href="about_us.html#limited-menu"><button class="button">Learn Limited Menu</button></a>
 
-        <div class="menu-items">
-            <div class="menu-item">
+        <div class="menu-list">
+            
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Cappuccino.jpg" alt="Cappuccino image">
                 <h2 class="menu-name">Cappuccino</h2>
                 <p>A rich and creamy coffee topped with frothy milk foam.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Latte.jpg" alt="Latter image">
                 <h2 class="menu-name">Latte</h3>
                 <p>Smooth espresso mixed with steamed milk and a touch of sweetness.</p>
             </div>
 
-            <div class="menu-item">
+            <div class="menu-box">
                 <img class="menu-img" src="images\menu\Cheesecake.jpg" alt="Cheesecake image">
                 <h2 class="menu-name">Signature Cheesecake</h3>
                 <p>Classic creamy cheesecake with a buttery graham cracker crust.</p>
             </div>
-
-            <button class="button" onclick="location.href='menu.html'">More Menu</button>
-
         </div>
+
+        <button class="button" onclick="location.href='menu.html'">More Menu</button>
     </section>
 
     <footer>
-        <p>&copy; 2024 Unplug Cat Cafe. All rights reserved.</p>
+        <a href="https://www.starbucks.com/menu?gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csl5AfhNkMI9tOunNOPjo4XiV6WckQTE9Jg7QwDKryVb5S1beusDprIaAqqHEALw_wcB">
+            Starbucks</a>
+        <a href="https://bluebottlecoffee.com/us/eng?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0cslesETWwpSwpPmAmNuzR9D0ysxN6YGAihZSb3UEkhiwFiXj8pIKs0gaAtzoEALw_wcB">
+            Bluebottle</a>
     </footer>
-
+    
 </body>
+
+
+
+
+
+
 </html>

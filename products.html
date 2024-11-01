@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unplug Cat Cafe</title>
+    <link rel="icon" type="image/x-icon" href="images/logo_favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="images/logo_big.png" alt="Logo image"></a>
+            <a href="index.html" class="logo-text">Unplug Cat Cafe</a>
+        </div>
+        <nav>
+            <div class="burger-button" id="burger-button">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product">
+        <h2 class="product-title">- Best Products -</h2>
+
+        <aside class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><button class="filter" data-category="all">All</button></li>
+                <li><button class="filter" data-category="coffee">Coffee</button></li>
+                <li><button class="filter" data-category="tea">Tea</button></li>
+                <li><button class="filter" data-category="cups">Cups</button></li>
+                <li><button class="filter" data-category="accessories">Accessories</button></li>
+            </ul>
+        </aside>
+
+        <div class="product-list">
+            
+            <!-- Beans -->
+            <div class="product-item" data-category="coffee">
+                <img class="product-img" src="images/products/single serve.jpg" alt="Americano image">
+                <h3>Craft Instant Coffee Single Serve</h3>
+                <p>$4<br><br>Ethiopian Single Origin, Light Roast</p>
+                <button class="button">Add To Cart</button>
+            </div>
+
+            <!-- Tea -->
+            <div class="product-item" data-category="tea">
+                <img class="product-img" src="images/products/matcha.jpg" alt="Matcha image">
+                <h3>Craft Matcha</h3>
+                <p>$4<br><br>Ceremonial Grade and Stone-Milled from Uji, Japan</p>
+                <button class="button">Add To Cart</button>
+            </div>
+
+            <!-- Accessories -->
+            <div class="product-item" data-category="accessories">
+                <img class="product-img" src="images/products/dripper.webp" alt="Dripper image">
+                <h3>Unplug Cat Dripper with Coffee Filters</h3>
+                <p>$4<br><br>Bundle and Save $12 Value</p>
+                <button class="button">Add To Cart</button>
+            </div>
+
+            <!-- Cups -->
+            <div class="product-item" data-category="cups">
+                <img class="product-img" src="images/products/mug.webp" alt="Mug image">
+                <h3>Unplug Cat Mug</h3>
+                <p>$4<br><br>A Dog Named 'Cat'</p>
+                <button class="button">Add To Cart</button>
+            </div>
+
+            <div class="product-item" data-category="cups">
+                <img class="product-img" src="images/products/aroma glass.png" alt="Aroma glass image">
+                <h3>Aroma Glass Set</h3>
+                <p>$4<br><br>Please, it's not a Whiskey Glass.</p>
+                <button class="button">Add To Cart</button>
+            </div>
+
+            <div class="product-item" data-category="cups">
+                <img class="product-img" src="images/products/cold-brew bottle.webp" alt="Cold brew bottle image">
+                <h3>Hydro Cold Brew Bottle</h3>
+                <p>$4<br><br>Fuss-free Cold Brew, Overnight</p>
+                <button class="button">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Unplug Cat Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
